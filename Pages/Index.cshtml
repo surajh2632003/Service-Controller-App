@@ -1,0 +1,15 @@
+@page
+@model ServiceControllerApp.Pages.IndexModel
+@{
+    ViewData["Title"] = "Service Controller";
+}
+
+<h1>Control MyWorker Service</h1>
+
+<form method="post">
+    <button type="submit" asp-page-handler="StartService">Start Service</button>
+    <button type="submit" asp-page-handler="StopService">Stop Service</button>
+</form>
+
+<p>Service Status: @Model.ServiceStatus</p>
+
